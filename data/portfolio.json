@@ -4,9 +4,9 @@
   "headerTaglineTwo": "I'm Amir Ghasemi - junior frontend developer",
   "headerTaglineThree": "curious and always learning",
   "headerTaglineFour": "based in Tehran, Iran.",
-  "showCursor": true,
-  "showBlog": true,
-  "darkMode": true,
+  "showCursor": false,
+  "showBlog": false,
+  "darkMode": false,
   "showResume": true,
   "socials": [
     {
@@ -18,6 +18,11 @@
       "id": "2",
       "title": "Email",
       "link": "mailto:amirr.ghasemi02@gmail.com"
+    },
+    {
+      "id": "3",
+      "title": "Phone",
+      "link": "tel:09339766613"
     }
   ],
   "projects": [

@@ -25,16 +25,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             <div className="flex items-center justify-between p-2 laptop:p-0">
               <h1
                 onClick={() => router.push("/")}
-                className="font-medium p-2 laptop:p-0 link">
-                {name}.
-              </h1>
+                className="font-medium p-2 laptop:p-0 link"></h1>
 
               <div className="flex items-center">
                 {data.darkMode && (
-                  <Button
-                    onClick={() =>
-                      setTheme(theme === "dark" ? "light" : "dark")
-                    }>
+                  <Button onClick={() => setTheme(theme === "light")}>
                     <img
                       className="h-6"
                       src={`/images/${
@@ -77,7 +72,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}>
+                    onClick={() => window.open("tel:09339766613", "_self")}>
                     Contact
                   </Button>
                 </div>
@@ -98,7 +93,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}>
+                    onClick={() => window.open("tel:09339766613", "_self")}>
                     Contact
                   </Button>
                 </div>
@@ -131,7 +126,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+            <Button onClick={() => window.open("tel:09339766613", "_self")}>
               Contact
             </Button>
             {mounted && theme && data.darkMode && (
@@ -159,7 +154,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+            <Button onClick={() => window.open("tel:09339766613", "_self")}>
               Contact
             </Button>
 
