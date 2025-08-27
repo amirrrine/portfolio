@@ -25,7 +25,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             <div className="flex items-center justify-between p-2 laptop:p-0">
               <h1
                 onClick={() => router.push("/")}
-                className="font-medium p-2 laptop:p-0 link"></h1>
+                className="font-medium p-2 laptop:p-0 link"
+              ></h1>
 
               <div className="flex items-center">
                 {data.darkMode && (
@@ -34,7 +35,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       className="h-6"
                       src={`/images/${
                         theme === "dark" ? "moon.svg" : "sun.svg"
-                      }`}></img>
+                      }`}
+                    ></img>
                   </Button>
                 )}
 
@@ -49,14 +51,16 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                         : theme === "light"
                         ? "cancel.svg"
                         : "cancel-white.svg"
-                    }`}></img>
+                    }`}
+                  ></img>
                 </Popover.Button>
               </div>
             </div>
             <Popover.Panel
               className={`absolute right-0 z-10 w-11/12 p-4 ${
                 theme === "dark" ? "bg-slate-800" : "bg-white"
-              } shadow-md rounded-md`}>
+              } shadow-md rounded-md`}
+            >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
                   <Button onClick={handleWorkScroll}>Work</Button>
@@ -64,15 +68,15 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
                   {showResume && (
                     <Button
-                      onClick={() =>
-                        window.open("mailto:hello@chetanverma.com")
-                      }>
+                      onClick={() => window.open("amirr.ghasemi02@gmail.com")}
+                    >
                       Resume
                     </Button>
                   )}
 
                   <Button
-                    onClick={() => window.open("tel:09339766613", "_self")}>
+                    onClick={() => window.open("tel:09339766613", "_self")}
+                  >
                     Contact
                   </Button>
                 </div>
@@ -87,13 +91,15 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   {showResume && (
                     <Button
                       onClick={() => router.push("/resume")}
-                      classes="first:ml-1">
+                      classes="first:ml-1"
+                    >
                       Resume
                     </Button>
                   )}
 
                   <Button
-                    onClick={() => window.open("tel:09339766613", "_self")}>
+                    onClick={() => window.open("tel:09339766613", "_self")}
+                  >
                     Contact
                   </Button>
                 </div>
@@ -105,10 +111,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
       <div
         className={`mt-10 hidden flex-row items-center justify-between sticky ${
           theme === "light" && "bg-white"
-        } dark:text-white top-0 z-10 tablet:flex`}>
+        } dark:text-white top-0 z-10 tablet:flex`}
+      >
         <h1
           onClick={() => router.push("/")}
-          className="font-medium cursor-pointer mob:p-2 laptop:p-0">
+          className="font-medium cursor-pointer mob:p-2 laptop:p-0"
+        >
           {name}.
         </h1>
         {!isBlog ? (
@@ -121,7 +129,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {showResume && (
               <Button
                 onClick={() => router.push("/resume")}
-                classes="first:ml-1">
+                classes="first:ml-1"
+              >
                 Resume
               </Button>
             )}
@@ -131,12 +140,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             </Button>
             {mounted && theme && data.darkMode && (
               <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              >
                 <img
                   className="h-6"
-                  src={`/images/${
-                    theme === "dark" ? "moon.svg" : "sun.svg"
-                  }`}></img>
+                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                ></img>
               </Button>
             )}
           </div>
@@ -149,7 +158,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {showResume && (
               <Button
                 onClick={() => router.push("/resume")}
-                classes="first:ml-1">
+                classes="first:ml-1"
+              >
                 Resume
               </Button>
             )}
@@ -160,12 +170,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
             {mounted && theme && data.darkMode && (
               <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              >
                 <img
                   className="h-6"
-                  src={`/images/${
-                    theme === "dark" ? "moon.svg" : "sun.svg"
-                  }`}></img>
+                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                ></img>
               </Button>
             )}
           </div>

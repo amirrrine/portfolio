@@ -52,30 +52,13 @@
     }
   ],
   "aboutpara": "I'm a junior frontend developer with 1 year of experience working with React, Next.js, and modern tools. I enjoy building clean, user-friendly interfaces and continuously improving my skills by working on side projects and learning new technologies.",
-  "resume": {
-    "tagline": "👋 I'm a junior frontend developer passionate about clean code and good UI.",
-    "description": "I build web applications using React, Next.js, and modern frontend libraries. Skilled in writing bug-free code, manual QA testing, and collaborating in team environments.",
-    "experiences": [
-      {
-        "id": "1",
-        "dates": "2024 – Present",
-        "type": "Full Time",
-        "position": "Junior Frontend Developer at Energym",
-        "bullets": [
-          "Refactored legacy components to functional components",
-          "Wrote clean and bug-free code for the main site and admin dashboard",
-          "Managed tasks in Jira and collaborated with the team for smooth workflow",
-          "Performed manual UI testing and documented test scenarios"
-        ]
-      }
-    ],
-    "education": {
-      "universityName": "Azad University",
-      "universityDate": "2021 – Present",
-      "universityPara": "Pursuing a Bachelor's degree in Computer Engineering at Azad University, Tehran."
-    },
-    "languages": ["JavaScript", "TypeScript", "HTML", "CSS"],
-    "frameworks": ["React", "Next.js", "Redux"],
-    "others": ["Git", "Tailwind CSS", "Material UI", "Jira", "Sentry"]
-  }
+  "resume": [
+    {
+      "id": "1",
+      "title": "Amir Ghasemi",
+      "description": "Frontend Developer",
+      "imageSrc": "/images/resume-pic.png",
+      "url": "https://github.com/amirrrine"
+    }
+  ]
 }
