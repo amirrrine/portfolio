@@ -6,7 +6,7 @@ const WorkCard = ({ img, name, description, onClick }) => {
       className="overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link"
       onClick={onClick}
     >
-      <div
+      {/* <div
         className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-64 laptop:h-96"
       >
         <img
@@ -14,7 +14,7 @@ const WorkCard = ({ img, name, description, onClick }) => {
           className="h-full w-full object-cover hover:scale-110 transition-all ease-out duration-300"
           src={img}
         ></img>
-      </div>
+      </div> */}
       <h1 className="mt-5 text-3xl font-medium">
         {name ? name : "Project Name"}
       </h1>

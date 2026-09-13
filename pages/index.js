@@ -103,7 +103,7 @@ export default function Home() {
               {data.projects.map((project, index) => (
                 <WorkCard
                   key={index}
-                  img={project.imageSrc}
+                  //img={project.imageSrc}
                   name={project.title}
                   description={project.description}
                   onClick={() => window.open(project.url, "_blank")}
