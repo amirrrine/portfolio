@@ -3,7 +3,7 @@ import React from "react";
 const ResumeCard = ({ img, name, description, onClick }) => {
   return (
     <div
-      className="overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link"
+      className="overflow-hidden rounded-lg p-2 laptop:p-6 first:ml-0 link"
       onClick={onClick}
     >
       <h1 className="mt-5 text-3xl font-medium">
@@ -12,14 +12,10 @@ const ResumeCard = ({ img, name, description, onClick }) => {
       <h2 className="text-xl opacity-50">
         {description ? description : "Description"}
       </h2>
-      <div
-        className="
-         content-center overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto"
-        style={{ height: "100%" }}
-      >
+      <div className="mt-5 overflow-hidden rounded-lg">
         <img
-          alt={name}
-          className="h-full w-full object-cover justify-items-center content-center  transition-all ease-out duration-400"
+          alt={name ? name : "Project"}
+          className="w-full rounded-lg"
           src={img}
         ></img>
       </div>

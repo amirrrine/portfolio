@@ -1,15 +1,13 @@
+import Head from "next/head";
 import { useRef } from "react";
+import { stagger } from "../animations";
+import Cursor from "../components/Cursor";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
 import { useIsomorphicLayoutEffect } from "../utils";
-import { stagger } from "../animations";
-import Footer from "../components/Footer";
-import Head from "next/head";
-import Button from "../components/Button";
-import Link from "next/link";
-import Cursor from "../components/Cursor";
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -44,7 +42,7 @@ export default function Home() {
     stagger(
       [textOne.current, textTwo.current, textThree.current, textFour.current],
       { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
-      { y: 0, x: 0, transform: "scale(1)" }
+      { y: 0, x: 0, transform: "scale(1)" },
     );
   }, []);
 
@@ -53,6 +51,11 @@ export default function Home() {
       {data.showCursor && <Cursor />}
       <Head>
         <title>{data.name}</title>
+        <meta name="description" content={data.aboutpara} />
+        <meta property="og:title" content={data.name} />
+        <meta property="og:description" content={data.aboutpara} />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
 
       <div className="gradient-circle"></div>
@@ -93,11 +96,24 @@ export default function Home() {
 
           <Socials className="mt-2 laptop:mt-5" />
         </div>
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
+        <div className="mt-10 laptop:mt-32 p-2 laptop:p-0" ref={workRef}>
           <h1 className="text-2xl text-bold">Work.</h1>
+          {data.projects && data.projects.length > 0 && (
+            <div className="mt-5 grid grid-cols-1 laptop:grid-cols-2 gap-6">
+              {data.projects.map((project, index) => (
+                <WorkCard
+                  key={index}
+                  img={project.imageSrc}
+                  name={project.title}
+                  description={project.description}
+                  onClick={() => window.open(project.url, "_blank")}
+                />
+              ))}
+            </div>
+          )}
         </div>
 
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
+        <div className="mt-10 laptop:mt-32 p-2 laptop:p-0">
           <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service, index) => (
@@ -112,7 +128,7 @@ export default function Home() {
 
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-10 text-bold">About.</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-4/5">
             {data.aboutpara}
           </p>
         </div>

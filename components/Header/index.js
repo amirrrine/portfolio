@@ -30,9 +30,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
               <div className="flex items-center">
                 {data.darkMode && (
-                  <Button onClick={() => setTheme(theme === "light")}>
+                  <Button
+                    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  >
                     <img
                       className="h-6"
+                      alt="Toggle theme"
                       src={`/images/${
                         theme === "dark" ? "moon.svg" : "sun.svg"
                       }`}
@@ -43,6 +46,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <Popover.Button>
                   <img
                     className="h-5"
+                    alt={open ? "Close menu" : "Open menu"}
                     src={`/images/${
                       !open
                         ? theme === "dark"
@@ -67,9 +71,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   <Button onClick={handleAboutScroll}>About</Button>
 
                   {showResume && (
-                    <Button
-                      onClick={() => window.open("amirr.ghasemi02@gmail.com")}
-                    >
+                    <Button onClick={() => router.push("/resume")}>
                       Resume
                     </Button>
                   )}
@@ -144,6 +146,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               >
                 <img
                   className="h-6"
+                  alt="Toggle theme"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                 ></img>
               </Button>
@@ -174,6 +177,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               >
                 <img
                   className="h-6"
+                  alt="Toggle theme"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                 ></img>
               </Button>

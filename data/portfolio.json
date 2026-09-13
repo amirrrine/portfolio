@@ -1,7 +1,7 @@
 {
   "name": "Amir Ghasemi",
   "headerTaglineOne": "Hello 👋",
-  "headerTaglineTwo": "I'm Amir Ghasemi - junior frontend developer",
+  "headerTaglineTwo": "I'm Amir Ghasemi - frontend developer",
   "headerTaglineThree": "curious and always learning",
   "headerTaglineFour": "based in Tehran, Iran.",
   "showCursor": false,
@@ -51,13 +51,13 @@
       "description": "Performing thorough manual testing, writing test scenarios, and identifying bugs."
     }
   ],
-  "aboutpara": "I'm a junior frontend developer with 1 year of experience working with React, Next.js, and modern tools. I enjoy building clean, user-friendly interfaces and continuously improving my skills by working on side projects and learning new technologies.",
+  "aboutpara": "Frontend developer with 2+ years of professional experience (since 2024) building production web applications using React, Next.js and TypeScript. Led a refactor of an admin dashboard and created a reusable component library to improve maintainability and developer productivity; skilled in responsive, accessible UI development, REST API integration, performance optimization, and modern styling (Tailwind, Material UI). Collaborative team player committed to clean code, testing, and continuous learning.",
   "resume": [
     {
       "id": "1",
       "title": "Amir Ghasemi",
       "description": "Frontend Developer",
-      "imageSrc": "/images/resume-pic.png",
+      "imageSrc": "/images/resume-new.png",
       "url": "https://github.com/amirrrine"
     }
   ]

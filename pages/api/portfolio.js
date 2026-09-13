@@ -2,19 +2,27 @@ import fs from "fs";
 import { join } from "path";
 
 export default function handler(req, res) {
-  const portfolioData = join(process.cwd(), "/data/portfolio.json");
-  if (process.env.NODE_ENV === "development") {
-    if (req.method === "POST") {
+  if (process.env.NODE_ENV !== "development") {
+    return res.status(403).json({
+      error: "This route only works in development mode.",
+    });
+  }
+
+  if (req.method === "POST") {
+    try {
+      const portfolioData = join(process.cwd(), "data", "portfolio.json");
       fs.writeFileSync(
         portfolioData,
-        JSON.stringify(req.body),
-        "utf-8",
-        (err) => console.log(err)
+        JSON.stringify(req.body, null, 2),
+        "utf-8"
       );
-    } else {
-      res
-        .status(200)
-        .json({ name: "This route works in development mode only" });
+      return res.status(200).json({ success: true });
+    } catch (err) {
+      return res.status(500).json({ error: err.message });
     }
   }
+
+  return res.status(200).json({
+    message: "This route works in development mode only",
+  });
 }
